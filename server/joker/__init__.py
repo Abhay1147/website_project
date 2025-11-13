@@ -38,16 +38,6 @@ def create_app() -> Flask:
 
     # Register routes (Blueprint)
     this_app.register_blueprint(main)
-    @this_app.route("/")
-    def home():
-        return {
-            "message": "Welcome to the Joker API!",
-            "endpoints": [
-                "/api/v1/jokes/id/<id>",
-                "/api/v1/jokes/<language>/<category>/all",
-                "/api/v1/jokes/<language>/<category>/<number>"
-            ]
-        }
 
     return this_app
 

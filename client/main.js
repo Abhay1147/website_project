@@ -1,5 +1,5 @@
 // === CONFIG ===
-const API_BASE = "http://127.0.0.1:5000/api/v1/jokes"; // Flask backend URL
+const API_BASE = "https://website-project-9.onrender.com/api/v1/jokes"; // Flask backend URL
 
 // === Helper function to show messages ===
 function showMessage(msg, isError = false) {
