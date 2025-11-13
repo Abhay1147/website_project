@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokes API Client</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script defer src="main.js"></script>
+</head>
+<body class="has-background-light">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Random Jokes API</h1>
+
+      <div class="box">
+        <!-- Dropdowns in a single line -->
+        <div class="columns is-multiline">
+          <!-- Language -->
+          <div class="column is-one-quarter">
+            <div class="field">
+              <label class="label">Language</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="language">
+                    <option value="any" selected>Any</option> <!-- Added "Any" option -->
+                    <option value="en">English</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="it">Italian</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="nl">Dutch</option>
+                    <option value="sv">Swedish</option>
+                    <option value="fi">Finnish</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category -->
+          <div class="column is-one-quarter">
+            <div class="field">
+              <label class="label">Category</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="category">
+                    <option value="any">Any</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="chuck">Chuck</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Number of Jokes -->
+          <div class="column is-one-quarter">
+            <div class="field">
+              <label class="label">Number of Jokes</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="numJokes">
+                    <option value="all">All Jokes</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Joke ID input -->
+          <div class="column is-one-quarter">
+            <div class="field">
+              <label class="label">Joke ID (optional)</label>
+              <div class="control">
+                <input id="jokeIdInput" class="input" type="number" placeholder="Enter joke ID (0–952)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="field is-grouped is-grouped-centered mt-4">
+          <div class="control">
+            <button id="loadJokesBtn" class="button is-primary">Get Random Jokes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Joke list -->
+      <div id="jokeList" class="columns is-multiline mt-5">
+        <p class="has-text-grey has-text-centered is-size-5">Click the button to load jokes!</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
